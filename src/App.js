@@ -157,16 +157,8 @@ function App() {
         Doping in Professional Bicycle Racing
       </h1>
       <h4 style={{ fontWeight: "bold" }}>35 Fastest times up Alpe d'Huez</h4>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-        }}
-      >
-        <div ref={chartRef}></div>
-        <div ref={legendRef}></div>
-      </div>
+      <div ref={chartRef}></div>
+      <div ref={legendRef}></div>
       <div id="tooltip"></div>
     </div>
   );
