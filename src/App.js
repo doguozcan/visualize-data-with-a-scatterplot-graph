@@ -5,7 +5,7 @@ import colors from "./colors.js";
 
 function App() {
   const [values, setValues] = useState([]);
-  const chartRef = useRef();
+  const graphRef = useRef();
   const legendRef = useRef();
 
   useEffect(() => {
@@ -45,7 +45,7 @@ function App() {
     const height = 500 - margin.top - margin.bottom;
 
     const svg = d3
-      .select(chartRef.current)
+      .select(graphRef.current)
       .append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
@@ -157,7 +157,7 @@ function App() {
         Doping in Professional Bicycle Racing
       </h1>
       <h4 style={{ fontWeight: "bold" }}>35 Fastest times up Alpe d'Huez</h4>
-      <div ref={chartRef}></div>
+      <div ref={graphRef}></div>
       <div ref={legendRef}></div>
       <div id="tooltip"></div>
     </div>
